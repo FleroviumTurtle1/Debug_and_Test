@@ -42,8 +42,8 @@ public class DebugAndTest
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == ModCreativeModeTabs.DTTAB) {
-            event.accept(ModItems.DEBUGGING_WAND);
-            event.accept(ModBlocks.DEBUG_BLOCK);
+            ModBlocks.BLOCKS.getEntries().forEach(event::accept);
+            ModItems.ITEMS.getEntries().forEach(event::accept);
         }
     }
 
