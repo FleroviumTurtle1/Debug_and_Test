@@ -1,8 +1,8 @@
 package fleroviumturtle1.debugandtest;
 
 import com.mojang.logging.LogUtils;
+import fleroviumturtle1.debugandtest.block.ModBlocks;
 import fleroviumturtle1.debugandtest.item.ModItems;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -28,6 +28,7 @@ public class DebugAndTest
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -40,8 +41,9 @@ public class DebugAndTest
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if (event.getTab() == CreativeModeTabs.INGREDIENTS) {
+        if (event.getTab() == ModCreativeModeTabs.DTTAB) {
             event.accept(ModItems.DEBUGGING_WAND);
+            event.accept(ModBlocks.DEBUG_BLOCK);
         }
     }
 

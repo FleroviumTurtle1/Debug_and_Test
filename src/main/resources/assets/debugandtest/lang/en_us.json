@@ -1,3 +1,7 @@
 {
-  "item.debugandtest.debugging_wand": "Debug Wand"
+  "item.debugandtest.debugging_wand": "Debug Wand",
+
+  "block.debugandtest.debug_block": "Debug Block",
+
+  "creativemodetab.dttab": "Debug and Test"
 }

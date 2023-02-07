@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model":  "debugandtest:block/debug_block"}
+  }
+}
