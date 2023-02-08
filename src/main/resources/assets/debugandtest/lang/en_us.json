@@ -3,5 +3,7 @@
 
   "block.debugandtest.debug_block": "Debug Block",
 
-  "creativemodetab.dttab": "Debug and Test"
+  "creativemodetab.dttab": "Debug and Test",
+
+  "chat.dat.blockpos": "%s"
 }

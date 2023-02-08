@@ -12,7 +12,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, DebugAndTest.MODID);
 
     public static final RegistryObject<Item> DEBUGGING_WAND = ITEMS.register("debugging_wand",
-            () -> new Item(new Item.Properties()));
+            () -> new DebuggingWandItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
